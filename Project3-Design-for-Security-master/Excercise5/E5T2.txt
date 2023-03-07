@@ -1,0 +1,8 @@
+Identify tools that will allow you to do the following: 
+For each tool - identify an example compliance violation or vulnerability that it might expose.
+	a. Scan infrastructure as code templates. 
+Cfripper: example: IAMRolesOverprivilegedRule: Role 'rootRole' contains an insecure permission '*'
+	b. Scan AMI’s or containers for OS vulnerabilities. 
+Clair: issue relative to race condition.
+	c. Scan an AWS environment for cloud configuration vulnerabilities.
+AWS config: example if publish facing allow wire range port to access in the c3-app.yml file.

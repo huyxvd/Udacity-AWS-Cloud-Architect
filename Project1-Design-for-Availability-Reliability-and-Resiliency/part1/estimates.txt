@@ -1,0 +1,14 @@
+Minimum RTO for a single AZ outage
+Minimum RTO for a single region outage
+
+00:00 - Problem happens (0 minutes)
+00:05 - An amount of time passes before an alert triggers (5 minutes)
+00:06 - Alert triggers on-all staff (1 minute)
+00:16 - On-call staff may need to get out of bed, get to computer, log in, log onto VPN (10 minutes)
+00:26 - On-call staff starts diagnosing issue (10 minutes)
+00:41 - Root cause is discovered (15 minutes)
+00:46 - Remediation started (5 minutes)
+00:56 - Remediation completed (10 minutes)
+
+Minimum RPO for a single AZ outage(10 mins promote read replica to became primary)
+Minimum RPO for a single region outage(at least 1 hour)

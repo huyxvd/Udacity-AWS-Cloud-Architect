@@ -1,0 +1,54 @@
+[ec2-user@ip-10-2-10-151 ~]$ mysql -u admin -h read-replica-primary.cllbbpjfpvpa.us-east-2.rds.amazonaws.com -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.28 Source distribution
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mydb               |
+| mysql              |
+| performance_schema |
+| sys                |
+| testdb             |
+| udacity            |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use testdb
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> select * from testTable;
++-------+
+| test  |
++-------+
+| hello |
++-------+
+1 row in set (0.00 sec)
+
+mysql> insert into testTable(test) values('hello');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from testTable;
++-------+
+| test  |
++-------+
+| hello |
+| hello |
++-------+
+2 rows in set (0.00 sec)
+
+mysql> 

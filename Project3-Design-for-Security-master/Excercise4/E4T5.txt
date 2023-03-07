@@ -1,0 +1,7 @@
+with the suggestion for the current system i would like to proposal some idea.
+for the S3
+	- limit only read access with instance profile, thrus we need to re-infore the s3 policy accept readonly from secific machine with ip range or specific security group
+	- for the secret we would only allow user from certain group
+EC2 our web server
+	- there no need to put it publish facing. we can put it to the private subnet and
+	- Use AWS S3 Empoint to access S3 Bucket to re-inforce security & improve performance because net work does not leave the aws network.
